@@ -1,10 +1,12 @@
 package com.frankcalise.androidstudiohelloworld;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.yasesprox.android.transcommusdk.TransCommuActivity;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -30,8 +32,17 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
+        switch (id)
+        {
+            case R.id.action_settings:
+                return true;
+            case R.id.action_translate:
+                // launch the TransCommu activity
+                Intent intent = new Intent(this, TransCommuActivity.class);
+                intent.putExtra(TransCommuActivity.APPLICATION_CODE_EXTRA, "ZXXxSMGNOO");
+                this.startActivity(intent);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
