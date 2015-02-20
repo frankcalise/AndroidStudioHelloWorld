@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- TransCommu activities for helping translation -->
+        <activity android:name="com.yasesprox.android.transcommusdk.TransCommuActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name="com.yasesprox.android.transcommusdk.LoginActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name="com.yasesprox.android.transcommusdk.CreateAccountActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name="com.yasesprox.android.transcommusdk.TranslateActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
+
     </application>
 
+    <!-- Internet permission required for TransCommu -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
