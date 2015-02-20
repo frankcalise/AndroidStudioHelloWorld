@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile files('libs/transcommu-android-sdk-v1.jar')
     compile files('libs/transcommu-java-sdk-v1.jar')
+    compile 'com.getbase:floatingactionbutton:1.8.0'
 }

@@ -5,7 +5,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.yasesprox.android.transcommusdk.TransCommuActivity;
 
 public class MainActivity extends ActionBarActivity {
@@ -14,6 +18,23 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Hide floating menu when pressing outside
+        final FloatingActionsMenu fam = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+        fam.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fam.collapse();
+            }
+        });
+
+        final FloatingActionButton actionA = (FloatingActionButton) findViewById(R.id.action_a);
+        actionA.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Do something on Action A press
+            }
+        });
     }
 
 
