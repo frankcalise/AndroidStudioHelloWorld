@@ -1,0 +1,10 @@
+<resources>
+  <!---->
+  <string name="app_name">AndroidStudioHelloWorld</string>
+  <!---->
+  <string name="hello_world">Ciao mondo!</string>
+  <!---->
+  <string name="action_settings">Impostazioni</string>
+  <!---->
+  <string name="action_translate">Aiuta a tradurre</string>
+</resources>
